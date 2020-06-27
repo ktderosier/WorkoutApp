@@ -8,6 +8,12 @@ const schema = new mongoose.Schema({
     password: {
         type: String,
         required: true
+    },
+    profile: {
+        name: String,
+        age: Number,
+        weight: Number,
+        height: Number
     }
 });
 

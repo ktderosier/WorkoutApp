@@ -1,6 +1,5 @@
 const express   = require("express");
 const Exercise = require('../models/exercises');
-const { Mongoose } = require("mongoose");
 const router = express.Router();
 
 //public routes
