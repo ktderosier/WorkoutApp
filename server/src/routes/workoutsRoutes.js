@@ -16,7 +16,7 @@ router.use((req, res, next) => {
 
 router.get("/", async (req, res) => {
     try {
-        const workout = await Workout.find({owner: req.session.user.id}).populate('exercise');
+        const workout = await Workout.find({owner: req.session.user.id}).populate('exercises');
         res.json(workout);
     } catch {
         res.status(400).send("bad request");
