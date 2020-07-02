@@ -12,6 +12,10 @@ const schema = new mongoose.Schema({
     image: {
         link: String,
         required: false
+    },
+    description: {
+        type: String,
+        required: false
     }
 });
 
