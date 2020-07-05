@@ -12,7 +12,7 @@
 }
 
 #signUpLink{
-    color: rgb(76, 95, 124);
+    color: white;
     text-decoration: none;
 }
 
@@ -27,6 +27,10 @@ li{
     margin: 0 auto; /* Added */
     float: none; /* Added */
     margin-bottom: 10px; /* Added */
+}
+
+h1, h6{
+    background-color: rgba(188, 187, 223, 0.303);
 }
 
 #workoutbuttons{

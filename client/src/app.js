@@ -67,7 +67,7 @@ const showPages = () => {
 
 </div>
 </div>
-<h6><b>Ready to save your first workout? <br> <a href="/signup" id="signUpLink"> Sign up here</a></b></h6>
+<h6><b>Ready to save your first workout? <br> <a href="/signup" id="signUpLink" class="badge badge-info"> Sign up here</a></b></h6>
 
 
 <ul id="exercises"></ul>
