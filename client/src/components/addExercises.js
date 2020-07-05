@@ -9,7 +9,7 @@ const submitHandler = async (addExercises) => {
             headers: {
                 'Content-Type': 'application/json'                
               },
-            body: JSON.stringify(newExercise)
+            body: JSON.stringify(addExercises)
         });
         const data = await response.json();
         console.log(data);
@@ -21,12 +21,20 @@ const submitHandler = async (addExercises) => {
 };
 const addExercises = async (ctx, next) => {
     const id = ctx.params.id; //id from URL paramater
-    $('#app').append(`<h2> Add workout </h2>
+    $('#app').append(`<h2> Create an exercise </h2>
     
     <form id="exercise">
   <div class="form-group">
-    <label for="exampleInputEmail1">Name</label>
-    <input type="text" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Enter name">
+    <label for="exampleInputEmail1">Exercise name</label>
+    <input type="text" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Enter exercise name">
+  </div>
+  <div class="form-group">
+  <label for="exampleInputEmail1">Muscle Group</label>
+  <input type="text" class="form-control" id="muscleType" aria-describedby="emailHelp" placeholder="Enter muscle group">
+  </div>
+  <div class="form-group">
+  <label for="exampleInputEmail1">Description</label>
+  <input type="text" class="form-control" id="description" aria-describedby="emailHelp" placeholder="Enter a description">
   </div>
 
   <button type="submit" class="btn btn-dark">Create new exercise</button>
@@ -36,8 +44,10 @@ const addExercises = async (ctx, next) => {
     $("#exercise").submit(async (e) => {
         e.preventDefault();
 
-        const newWorkout = {
-                name: $("#name").val()
+        const newExercise = {
+                name: $("#name").val(),
+                muscleType: $("#muscleType").val(),
+                description: $("#description").val()
         };
 
         console.log(newExercise);

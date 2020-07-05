@@ -22,12 +22,12 @@ const submitHandler = async (newWorkout) => {
 };
 const addWorkout = async (ctx, next) => {
     const id = ctx.params.id; //id from URL paramater
-    $('#app').append(`<h2> Add workout </h2>
+    $('#app').append(`<h2>Create a workout </h2>
     
     <form id="workout">
   <div class="form-group">
-    <label for="exampleInputEmail1">Name</label>
-    <input type="text" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Enter name">
+    <label for="exampleInputEmail1">Workout name</label>
+    <input type="text" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Enter workout name">
   </div>
 
   <button type="submit" class="btn btn-dark">Create new workout</button>
@@ -43,6 +43,7 @@ const addWorkout = async (ctx, next) => {
 
         console.log(newWorkout);
         await submitHandler(newWorkout);
+        page.redirect(`/editworkout/${data._id}`);
         
         
     });

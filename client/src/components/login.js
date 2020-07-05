@@ -22,6 +22,10 @@ const submitHandler = async (formData) => {
 };
 
 const login = (ctx, next) => {
+    if (ctx.params.id == 1) {
+        $("#app").append(`<h3>You must login first</h3>`)
+    }
+
 
     $('#app').append(`
     <form id="form-login">

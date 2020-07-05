@@ -19,3 +19,16 @@
 li{
     list-style-type: none;
 }
+
+#homepageExercises{
+    flex-wrap: nowrap;
+}
+.card {
+    margin: 0 auto; /* Added */
+    float: none; /* Added */
+    margin-bottom: 10px; /* Added */
+}
+
+#workoutbuttons{
+    padding-bottom: 2%;
+}

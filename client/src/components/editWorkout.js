@@ -53,16 +53,16 @@ const editWorkout = async (ctx, next) => {
     const exerciseWorkout = $('<ul></ul>');
 
     exercises.forEach((exercise) => {
-        const btn = $(`<button>add</button>`).on('click', () => {
+        const addBtn = $(`<div><button class="btn btn-secondary">add</button></div>`).on('click', () => {
             //add exercise to the workout
             addItemToWorkout(exercise._id, id);
         });
 
-        exerciseWorkout.append($(`<li>${exercise.name}</li>`).append(btn));
+        exerciseWorkout.append($(`<li class="list-group-item">${exercise.name}</li>`).append(addBtn));
     });
 
     $("#app").append(exerciseWorkout);
-
+    $("#app").append(`<a href="/workout"> <button type="button" class="btn btn-dark">Done</button></a>`);
 }
 
 export default editWorkout;
