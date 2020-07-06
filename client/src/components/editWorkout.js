@@ -50,7 +50,8 @@ const editWorkout = async (ctx, next) => {
     const id = ctx.params.id; //id from URL paramater
     const exercises = await getExercises();
 
-    const exerciseWorkout = $('<ul></ul>');
+    const exerciseWorkout = $('<ul class="list-group list-group-flush"></ul>');
+    $('#app').append(`<div id="cardDiv" style="display:flex; flex-wrap:wrap; justify-content:center;"></div>`)
 
     exercises.forEach((exercise) => {
         const addBtn = $(`<div><button class="btn btn-secondary">add</button></div>`).on('click', () => {
@@ -58,11 +59,11 @@ const editWorkout = async (ctx, next) => {
             addItemToWorkout(exercise._id, id);
         });
 
-        exerciseWorkout.append($(`<li class="list-group-item">${exercise.name}</li>`).append(addBtn));
+        exerciseWorkout.append($(`<div class="card" style="width: 18rem;"><li class="list-group-item">${exercise.name}</li></div>`).append(addBtn));
     });
 
-    $("#app").append(exerciseWorkout);
-    $("#app").append(`<a href="/workout"> <button type="button" class="btn btn-dark">Done</button></a>`);
+    $("#cardDiv").append(exerciseWorkout);
+    $("#cardDiv").append(`<a href="/workout"> <button type="button" class="btn btn-dark">Done</button></a>`);
 }
 
 export default editWorkout;

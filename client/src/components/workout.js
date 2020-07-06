@@ -37,7 +37,8 @@ const showProfile = async () => {
 
 
 const addWorkoutsToDom = (workouts) => {
-    
+
+    $('#app').append(`<div id="cardDiv" style="display:flex; flex-wrap:wrap; justify-content:center;"></div>`)
 
     workouts.forEach((workout) => {
         const ul = $('<div class="card" style="width: 18rem;"><ul class="list-group list-group-flush"></ul></div>');
@@ -54,7 +55,7 @@ const addWorkoutsToDom = (workouts) => {
 
         li.append(exerciseWorkout); 
         ul.append(li);
-        $("#app").append(ul);
+        $("#cardDiv").append(ul);
     });
 
 

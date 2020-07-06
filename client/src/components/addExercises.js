@@ -37,7 +37,7 @@ const addExercises = async (ctx, next) => {
   <input type="text" class="form-control" id="description" aria-describedby="emailHelp" placeholder="Enter a description">
   </div>
 
-  <button type="submit" class="btn btn-dark">Create new exercise</button>
+  <button type="submit" id="newExerciseButton" class="btn btn-dark">Create new exercise</button>
 </form>
     `)
 
@@ -50,9 +50,12 @@ const addExercises = async (ctx, next) => {
                 description: $("#description").val()
         };
 
+        $("form").trigger("reset");
+
         console.log(newExercise);
         await submitHandler(newExercise);
-        
+
+
         
     });
 
