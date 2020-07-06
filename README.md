@@ -8,6 +8,8 @@ Each exercise eventually will have its own description and image linked to it.
 
 The edit workout page still needs to have a 'remove' function and the ability to edit the title of the workout. 
 
+The workout page also needs to ability to delete exercises, edit the title, and delete the entire workout.
+
 For the "Create exerise" page, I still want to add an area to upload or link an image that will append on the workout page.
 
 When creating an excerise, I want to add a quick pop-up to show 'exerise added'. 
