@@ -2,24 +2,32 @@ Wireframe: https://wireframe.cc/hut6ue
 
 This is a workout app that allows you to build your own workout. There are existing exercises to choose from and the user can add their own.
 
-Ideally there will also be pre-built workouts that others can save/ vote on.
 
-Each exercise eventually will have its own description and image linked to it. 
 
-The edit workout page still needs to have a 'remove' function and the ability to edit the title of the workout. 
+////////Features to add:
+-Random workout generator that randomizes based on muslce type chosen and how many exercises you want to do.
 
-The workout page also needs to ability to delete exercises, edit the title, and delete the entire workout.
+-Auto order workouts alphabetically/ by rating
 
-For the "Create exerise" page, I still want to add an area to upload or link an image that will append on the workout page.
+-Add a rating system for workouts that other users can vote on based on level of intensity and how much they liked it. I also want to add a way to moderate new exerises added, as these go into the main database at the moment. 
 
-When creating an excerise, I want to add a quick pop-up to show 'exerise added'. 
+-When creating an excerise, add a quick pop-up to show 'exerise added'. 
 
-I want to add a rating system for workouts that other users can vote on based on level of intensity and how much they liked it. I also want to add a way to moderate new exerises added, as these go into the main database at the moment. 
+-For the "Create exerise" page, add an area to upload or link an image that will append on the workout page.
 
-I want to add a random workout generator that randomizes based on muslce type chosen and how many exercises you want to do.
+-Workout page also needs to ability to delete exercises, edit the title, and delete the entire workout.
 
-Problems that weren't fixed yet:
+-Edit workout page still needs to have a 'remove' function and the ability to edit the title of the workout. 
+
+-Each exercise eventually will have its own description and image linked to it. 
+
+-Add pre-built workouts that others can save/ vote on.
+
+
+
+Problems that weren't fixed yet/ that I ran into:
 -I was going to add a show/hide ability for the descriptions on the main page. Bootstrap had other plans so that does not work yet. :) 
+-LOTS of conflicting CSS with using Bootstrap.
 
 
 
